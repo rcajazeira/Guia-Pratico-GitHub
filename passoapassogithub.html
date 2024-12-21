@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Git e GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 25px;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e74c3c;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .tip {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guia Completo: Git e GitHub</h1>
+
+        <h2>1. Criar Novo Repositório no GitHub</h2>
+        <ol>
+            <li>Acesse <a href="https://github.com" target="_blank">github.com</a></li>
+            <li>Clique no ícone '+' no canto superior direito</li>
+            <li>Selecione "New Repository"</li>
+            <li>Configure o repositório:
+                <ul>
+                    <li>Nome do repositório (use hífens ou underscores, sem espaços)</li>
+                    <li>Descrição (opcional)</li>
+                    <li>Visibilidade: Public ou Private</li>
+                    <li>Não inicialize com README, .gitignore ou licença (vamos fazer isso manualmente)</li>
+                </ul>
+            </li>
+            <li>Clique em "Create repository"</li>
+        </ol>
+
+        <h2>2. Configuração Inicial do Git (primeira vez)</h2>
+        <div class="code-block">
+            <code>
+            git config --global user.name "Seu Nome"<br>
+            git config --global user.email "seu@email.com"
+            </code>
+        </div>
+
+        <h2>3. Preparar Projeto Local</h2>
+        <div class="code-block">
+            <code>
+            cd caminho/para/onde/quer/salvar/projeto<br>
+            git clone https://github.com/seu-usuario/nome-do-projeto<br>
+            cd "nome-do-projeto"
+            </code>
+        </div>
+
+        <h2>4. Inicializar e Configurar Repositório</h2>
+        <div class="code-block">
+            <code>
+            git init<br>
+            git remote add origin https://github.com/seu-usuario/nome-do-projeto<br>
+            git branch -M main<br>
+            git status<br>
+            git add .<br>
+            git commit -m "Adicionando arquivos iniciais do projeto"<br>
+            git push -u origin main
+            </code>
+        </div>
+
+        <h2>5. Comandos Úteis do Dia a Dia</h2>
+        <div class="code-block">
+            <code>
+            git status  # Verificar estado dos arquivos<br>
+            git log     # Ver histórico de commits<br>
+            git pull origin main  # Atualizar repositório local<br>
+            git branch  # Listar branches<br>
+            git checkout -b nova-branch  # Criar e mudar para nova branch<br>
+            git checkout nome-da-branch  # Mudar de branch
+            </code>
+        </div>
+
+        <h2>6. Configurar GitHub Pages</h2>
+        <ol>
+            <li>No repositório do GitHub, vá para "Settings"</li>
+            <li>No menu lateral, clique em "Pages"</li>
+            <li>Em "Build and deployment":
+                <ul>
+                    <li>Source: "Deploy from a branch"</li>
+                    <li>Branch: "main"</li>
+                    <li>Pasta: "/root"</li>
+                </ul>
+            </li>
+            <li>Clique em "Save"</li>
+        </ol>
+
+        <div class="tip">
+            <strong>Dicas importantes:</strong>
+            <ul>
+                <li>Certifique-se que seu arquivo index.html está na raiz do projeto</li>
+                <li>Use caminhos relativos para links e recursos</li>
+                <li>GitHub Pages está disponível gratuitamente apenas para repositórios públicos</li>
+                <li>O site pode demorar alguns minutos para ficar disponível</li>
+                <li>O link será: https://seu-usuario.github.io/nome-do-repositorio/</li>
+                <li>É possível configurar domínios personalizados</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            <strong>Solução de Problemas Comuns:</strong>
+            <ul>
+                <li>Se encontrar erro de "index.lock", use: <code>rm .git/index.lock</code></li>
+                <li>Se der erro no push, verifique se está na branch correta</li>
+                <li>Sempre faça pull antes de começar a trabalhar em um projeto compartilhado</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
