@@ -1,0 +1,53 @@
+Passo a passo GitHub
+
+1 - Acesse github.com
+Clique em '+' no canto superior direito
+Escolha "New Repository"
+Dê um nome ao repositório
+Escolha um nome para o repositório (sem espaços, use hífens ou underscores)
+Opcional: adicione uma descrição do projeto
+Escolha a visibilidade:
+
+Public (público para todos verem)
+Private (visível apenas para você e colaboradores convidados)
+Não inicialize com README, .gitignore ou licença
+Escolher uma licença se desejar
+Adicionar .gitignore para ignorar arquivos específicos
+Clique em "Create repository"
+
+2 - Navegue até a pasta onde deseja clonar o projeto
+Use o Git Bash (recomendado) ou terminal do seu sistema operacional
+
+3 - cd caminho/para/onde/quer/salvar/projeto
+git clone https://github.com/rcajazeira/Nome-do-projeto 
+cd "Nome-da-pasta"
+
+4 - git init
+git status
+Adicionar Todos os Arquivos (adicione os arquivos na pasta)
+git add .
+git commit -m "Adicionando arquivos iniciais do projeto"
+git push origin main
+
+5 - Lembrete
+git status  # Deve mostrar que está "clean", sem alterações pendentes
+git log     # Mostrará o histórico de commits
+
+6 - Para publicar seu site usando o GitHub Pages, siga estes passos:
+No repositório do GitHub
+Vá para "Settings"
+No menu lateral, clique em "Pages"
+Na seção "Build and deployment"
+Em "Source", selecione "Deploy from a branch"
+Na opção "Branch", escolha "main"
+Selecione a pasta raiz "/root"
+Clique em "Save"
+Aguarde a publicação
+O GitHub levará alguns minutos para gerar o link
+O link ficará disponível na mesma página de "Pages"
+Normalmente será no formato:
+https://seu-usuario.github.io/nome-do-repositorio/
+Dicas importantes
+Certifique-se que seu arquivo index.html está na raiz do projeto
+Todos os links e recursos devem ser relativos para funcionar corretamente
+Se não aparecer, verifique as configurações do repositório
